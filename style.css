@@ -7,12 +7,24 @@ a:hover {
     color: inherit;
 }
 
+.yellow {
+    color: #be9359;
+}
+
+.grey {
+    color: #b0b0b0;
+}
+
+.white-ish {
+    color: #f5f5f5;
+}
+
 .fs-15 {
     font-size: 15px;
 }
 
 header {
-    height: 700px;
+    /* height: 700px; */
     background-image: url("./img/avadabarbers-homepage-hero-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,41 +42,6 @@ header {
 
 .smaller-container>span {
     cursor: pointer;
-}
-
-.home {
-    color: #be9359;
-}
-
-.side-buttons {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    position: absolute;
-    right: 10px;
-}
-
-.first-side-button {
-    top: 110px;
-}
-
-.second-side-button {
-    top: 165px;
-}
-
-.row {
-    /* background-color: brown; */
-    padding-top: 150px;
-}
-
-.yellow-line {
-    background-color: #be9359;
-    height: 2px;
-    width: 20%;
-}
-
-.jumbo-image {
-    margin-top: -160px;
 }
 
 /* The Overlay (background) */
@@ -138,4 +115,45 @@ header {
         top: 15px;
         right: 35px;
     }
+}
+
+.side-buttons {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    right: 10px;
+}
+
+.first-side-button {
+    top: 110px;
+}
+
+.second-side-button {
+    top: 165px;
+}
+
+.row {
+    /* background-color: brown; */
+    padding-top: 150px;
+}
+
+.yellow-line {
+    background-color: #be9359;
+    height: 2px;
+    width: 20%;
+}
+
+.jumbo-image {
+    margin-top: -160px;
+}
+
+.proBarbers {
+    background-image: url("./img/avadabarbers-about-introbackground.jpg");
+    margin-top: -8px;
+}
+
+.proBarbers>div {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
