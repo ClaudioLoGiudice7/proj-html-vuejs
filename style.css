@@ -52,10 +52,20 @@ header {
     top: 165px;
 }
 
-/* .row {
-    background-color: brown;
+.row {
+    /* background-color: brown; */
     padding-top: 150px;
-} */
+}
+
+.yellow-line {
+    background-color: #be9359;
+    height: 2px;
+    width: 20%;
+}
+
+.jumbo-image {
+    margin-top: -160px;
+}
 
 /* The Overlay (background) */
 .overlay {
