@@ -31,9 +31,77 @@
 
 <body>
 
-    <!-- HEADER & JUMBO -->
-    <header>
+    <!-- HEADER, NAV & JUMBO -->
+    <header class="position-relative">
+        <div class="smaller-container">
 
+            <!-- NAV -->
+            <a href="#">
+                <img src="./img/avadabarbers-logo-x1.png" class="mt-4" alt="logo">
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-cart-shopping cart text-white text-end">
+                </i>
+            </a>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="#" class="fs-5">
+                        <span class="home">Home</span>
+                    </a>
+                    <a href="#" class="fs-5">
+                        About Us
+                    </a>
+                    <a href="#" class="fs-5">
+                        Services
+                    </a>
+                    <a href="#" class="fs-5">
+                        Shop
+                    </a>
+                    <a href="#" class="fs-5">
+                        Our Team
+                    </a>
+                    <a href="#" class="fs-5">
+                        Blog
+                    </a>
+                    <a href="#" class="fs-5">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <span onclick="openNav()" class="text-white"><i class="fa-solid fa-bars fs-4"></i></span>
+
+            <div class="side-buttons first-side-button rounded-2">
+                <span>&hearts;</span>
+                <span>Demos</span>
+            </div>
+            <div class="side-buttons second-side-button rounded-2">
+                <span>$39</span>
+                <span class="fs-15">On sale</span>
+            </div>
+            <!-- <div class="row">
+                <div class="col-6 text-white">
+                    <h2>Barber Shop</h2>
+                    <div class="yellow-line"></div>
+                    <h5>
+                        The Pinnacle of Male Grooming
+                    </h5>
+                    <button>Learn More</button>
+                </div>
+                <div class="col-6 text-white">
+                    <img src="./img/avadabarbers_hero_focalmirror-400x550.png" alt="">
+                </div>
+            </div> -->
+        </div>
+        </div>
     </header>
 
     <main>
@@ -67,6 +135,11 @@
 
         <!-- BOTTOM FOOTER -->
     </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
