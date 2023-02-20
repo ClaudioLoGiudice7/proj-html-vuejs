@@ -169,11 +169,29 @@ header {
 }
 
 .products {
-    margin-bottom: 200px;
-}
-
-.products {
     background-image: url("./img/avadabarbers-reviewsbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.external-div {
+    margin: auto;
+    background-color: darkblue;
+    width: 90%;
+    height: 100px;
+    margin-bottom: 200px;
+}
+
+.first-internal-div {
+    float: left;
+    background-image: url("./img/avadabarbers-cta-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+}
+
+.second-internal-div {
+    float: left;
+    background-color: teal;
+    width: 60%;
 }
