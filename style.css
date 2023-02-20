@@ -27,6 +27,26 @@ a:hover {
     background-color: #f5f5f5;
 }
 
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
 .fs-15 {
     font-size: 15px;
 }
@@ -141,11 +161,6 @@ header {
     top: 165px;
 }
 
-.row {
-    /* background-color: brown; */
-    padding-top: 150px;
-}
-
 .yellow-line {
     background-color: #be9359;
     height: 2px;
@@ -194,4 +209,25 @@ header {
     float: left;
     background-color: teal;
     width: 60%;
+}
+
+.upper-footer {
+    background-color: #121314;
+}
+
+#address {
+    color: #656363;
+}
+
+.upper-footer>.smaller-container>.row>.col-4>p>i {
+    color: #b0b0b0;
+}
+
+.bottom-footer {
+    background-color: #161718;
+    padding: 20px 20px;
+}
+
+.bottom-footer>span {
+    color: #353536;
 }
