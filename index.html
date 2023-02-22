@@ -12,6 +12,11 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- ABRIL FATFACE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
     <!-- TITLE -->
     <title>Avada Barbers</title>
 
@@ -29,78 +34,72 @@
     <script type="text/javascript" src="./js/app.js" defer></script>
 </head>
 
-<body>
+<body id="top">
 
     <!-- HEADER, NAV & JUMBO -->
     <header class="position-relative" id="myHeader">
-        <div class="smaller-container">
+        <div class="smaller-container m-auto">
 
             <!-- NAV -->
-            <a href="#">
-                <img src="./img/avadabarbers-logo-x1.png" class="mt-4" alt="logo">
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-cart-shopping cart text-white text-end">
-                </i>
-            </a>
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-
-                <!-- Button to close the overlay navigation -->
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="#" class="fs-5">
-                        <span class="yellow">Home</span>
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        About Us
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        Services
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        Shop
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        Our Team
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        Blog
-                    </a>
-                    <a href="#" class="text-white fs-5">
-                        Contact Us
-                    </a>
+            <div id="app">
+                <a href="#">
+                    <img src="./img/avadabarbers-logo-x1.png" class="mt-4" alt="logo">
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping cart text-white text-end"></i>
+                </a>
+                <div id="myNav" class="overlay">
+                    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <ul>
+                            <li v-for="link in links">
+                                <a :href="link.href" :class="link.class">{{ link.text }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
+                <span onclick="openNav()" class="text-white">
+                    <i class="fa-solid fa-bars fs-4 hamburger-menu">
+                    </i>
+                </span>
             </div>
 
-            <!-- Use any element to open/show the overlay navigation menu -->
-            <span onclick="openNav()" class="text-white"><i class="fa-solid fa-bars fs-4"></i></span>
-
-            <div class="side-buttons first-side-button rounded-2">
-                <span>&hearts;</span>
-                <span>Demos</span>
-            </div>
-            <div class="side-buttons second-side-button rounded-2">
-                <span>$39</span>
-                <span class="fs-15">On sale</span>
-            </div>
-            <div class="row">
+            <a href="#">
+                <div class="side-buttons first-side-button rounded-2">
+                    <span class="position-relative">
+                        <i class="fa-solid fa-layer-group layer position-absolute">
+                        </i>
+                    </span>
+                    <span class="demos position-absolute fs-11">Demos</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="side-buttons second-side-button rounded-2">
+                    <span class="dollar position-absolute">
+                        <b>$</b>
+                    </span>
+                    <span class="thirtynine fs-5 position-absolute"><b>39</b></span>
+                    <span class="on-sale fs-11 position-absolute">On sale</span>
+                </div>
+            </a>
+            <div class="row barber-shop-div">
                 <div class="col-6 text-white">
-                    <h2>Barber Shop</h2>
-                    <div class="yellow-line"></div>
-                    <h6>
+                    <h2 class="abril fs-60 mb-3">Barber Shop</h2>
+                    <div class="yellow-line mb-4"></div>
+                    <h6 class="grey-writing mb-4">
                         The Pinnacle of Male Grooming
                     </h6>
-                    <button>Learn More</button>
+                    <button type="button" class="px-4 py-2 fw-semibold">
+                        <span class="fs-14">
+                            LEARN MORE
+                        </span>
+                    </button>
                 </div>
                 <div class="col-6 text-white">
                     <img src="./img/avadabarbers_hero_focalmirror-400x550.png" class="jumbo-image" alt="barber hero">
                 </div>
             </div>
-        </div>
         </div>
     </header>
 
@@ -109,102 +108,149 @@
         <!-- PRO BARBERS SECTION -->
         <section class="proBarbers">
             <div class="d-flex flex-column justify-content-center align-items-center">
-                <h6 class="yellow">AWARD WINNING</h6>
-                <h3 class="grey">Pro Barbers</h3>
-                <button class="yellow">MEET YOUR NEW BARBER</button>
+                <h6 class="yellow fs-14">
+                    AWARD WINNING
+                </h6>
+                <h3 class="grey abril fs-50 mb-4">Pro Barbers</h3>
+                <button type="button" class="yellow px-4 py-2 fw-semibold">MEET YOUR NEW BARBER</button>
             </div>
+
+            <svg class="fusion-big-triangle-candy black-triangle" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#fff;padding:0;">
+                <path d="M0 100 L50 2 L100 100 Z"></path>
+            </svg>
         </section>
 
         <!-- SERVICES SECTION -->
-        <section class="services text-center">
-            <h6 class="yellow">MENS GROOMING</h6>
-            <h3 class="grey">Services</h3>
+        <section class="services position-relative text-center">
+            <h6 class="yellow fs-14">
+                MENS GROOMING
+            </h6>
+            <h3 class="grey abril fs-50 mb-5">Services</h3>
 
-            <div class="smaller-container">
+            <div class="smaller-container m-auto">
                 <div class="row">
                     <div class="col-4">
-                        <img src="./img/avadabarbers-trimcut-icon-before.png" class="w-25" alt="trim cut">
+                        <a href="#">
+                            <img src="./img/avadabarbers-trimcut-icon-before.png" class="w-25 mb-4" alt="trim cut">
+                            <h5 class="yellow abril mb-4">
+                                Trim & Cut
+                            </h5>
+                            <p class=" grey-writing fs-13">
+                                Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and
+                                ridiculously good looking.
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-washndry-icon.png" class="w-33" alt="shampoo">
+                        <a href="#">
+                            <img src="./img/avadabarbers-washndry-icon.png" class="w-33 mb-4" alt="shampoo">
+                            <h5 class="yellow abril mb-4">
+                                Wash & Dry
+                            </h5>
+                            <p class=" grey-writing fs-13">
+                                Take a seat in our fine leather chairs. Lean back and let us lather you a fresh head in
+                                a
+                                luxurious fashion.
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-beardtrim-icon.png" class="w-25" alt="beardtrim">
+                        <a href="#">
+                            <img src="./img/avadabarbers-beardtrim-icon.png" class="w-25 mb-4" alt="beardtrim">
+                            <h5 class="yellow abril mb-4">
+                                Beard Tidy
+                            </h5>
+                            <p class=" grey-writing fs-13">
+                                Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services
+                                from
+                                Avada Barbers.
+                            </p>
+                        </a>
                     </div>
-                    <div class="col-4">
-                        <h5 class="yellow">
-                            Trim & Cut
-                        </h5>
-                        <p>
-                            Avada Barbers are experts in the lickety split trim and hair cut. Quick but careful and
-                            ridiculously good looking.
-                        </p>
-                    </div>
-                    <div class="col-4">
-                        <h5 class="yellow">
-                            Wash & Dry
-                        </h5>
-                        <p>
-                            Take a seat in our fine leather chairs. Lean back and let us lather you a fresh head in a
-                            luxurious fashion.
-                        </p>
-                    </div>
-                    <div class="col-4">
-                        <h5 class="yellow">
-                            Beard Tidy
-                        </h5>
-                        <p>
-                            Tame the tangles and untidy facial hairs like a gentleman with our Beard Tidy services from
-                            Avada Barbers.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <button class="yellow">READ ABOUT OUR SERVICES</button>
+
+                    <div class="col mt-5 mb-5">
+                        <button type="button" class="yellow px-4 py-2 mb-5 fw-semibold">
+                            READ ABOUT OUR SERVICES
+                        </button>
                     </div>
                 </div>
             </div>
+            <svg class="fusion-big-triangle-candy black-triangle" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"
+                style="fill:#121315;padding:0;">
+                <path d="M0 100 L50 2 L100 100 Z"></path>
+            </svg>
         </section>
 
 
         <!-- PRODUCTS SECTION -->
         <section class="products text-center">
-            <h6 class="yellow">
+            <h6 class="yellow fs-14">
                 WE HAVE YOU COVERED
             </h6>
-            <h3 class="grey">
+            <h3 class="grey abril fs-50 mb-5">
                 Avada Grooming Products
             </h3>
 
             <div class="container">
                 <div class="row">
                     <div class="col-3">
-                        <img src="./img/brush_dark-400x400.png" class="w-100" alt="brush">
-                        <h4 class="yellow">Brush</h4>
-                        <h6 class="yellow">$15.00</h6>
+                        <a href="#">
+                            <img src="./img/brush_dark-400x400.png" class="w-100" alt="brush">
+
+                            <h4 class="yellow abril mt-3">
+                                Brush
+                            </h4>
+
+                            <h6 class="yellow fs-14">
+                                $15.00
+                            </h6>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="./img/scissors-400x400.png" class="w-100" alt="scissors">
-                        <h4 class="yellow">
-                            Scissors
-                        </h4>
-                        <h6 class="yellow">$85.00</h6>
+                        <a href="#">
+                            <img src="./img/scissors-400x400.png" class="w-100" alt="scissors">
+
+                            <h4 class="yellow abril mt-3">
+                                Scissors
+                            </h4>
+
+                            <h6 class="yellow fs-14">
+                                $85.00
+                            </h6>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="./img/hot_oil_dark-400x400.png" class="w-100" alt="hot oil">
-                        <h4 class="yellow">
-                            Hot Oil
-                        </h4>
-                        <h6 class="yellow">$15.00</h6>
+                        <a href="#">
+                            <img src="./img/hot_oil_dark-400x400.png" class="w-100" alt="hot oil">
+
+                            <h4 class="yellow abril mt-3">
+                                Hot Oil
+                            </h4>
+
+                            <h6 class="yellow fs-14">
+                                $15.00
+                            </h6>
+                        </a>
                     </div>
                     <div class="col-3">
-                        <img src="./img/straight_razor_dark-400x400.png" class="w-100" alt="straight razor">
-                        <h4 class="yellow">
-                            Straight Razor
-                        </h4>
-                        <h6 class="yellow">$30.00</h6>
+                        <a href="#">
+                            <img src="./img/straight_razor_dark-400x400.png" class="w-100" alt="straight razor">
+                            <h4 class="yellow abril mt-3">
+                                Straight Razor
+                            </h4>
+
+                            <h6 class="yellow fs-14">
+                                $30.00
+                            </h6>
+                        </a>
                     </div>
-                    <div class="col">
-                        <button class="yellow">SHOP OUR PRODUCT RANGE</button>
+                    <div class="col mb-5">
+                        <button type="button" class="yellow px-4 py-2 mt-5 mb-5 fw-semibold">
+                            SHOP OUR PRODUCT
+                            RANGE
+                        </button>
                     </div>
                 </div>
             </div>
@@ -213,71 +259,86 @@
 
         <!-- REVIEWS SECTION -->
         <section class="reviews">
-            <div class="smaller-container">
-                <div class="external-div">
-                    <div class="first-internal-div">
-                        <img src="./img/shaving_butter-400x400.png" class="w-75" alt="shaving butter">
-                    </div>
-                    <div class="second-internal-div">
-                        <h6 class="yellow">
+            <div class="smaller-container m-auto">
+                <div class="external-div border-top border-3">
+                    <a href="#">
+                        <div class="first-internal-div position-relative">
+                            <img src="./img/shaving_butter-400x400.png" class="w-75 position-absolute"
+                                alt="shaving butter">
+                        </div>
+                    </a>
+                    <div class="second-internal-div p-5">
+                        <h6 class="yellow fs-14">
                             THIS MONTHS FEATURED PRODUCT
                         </h6>
-                        <h3 class="grey">
+                        <h3 class="grey abril fs-50 mb-4">
                             Shaving Butter
                         </h3>
-                        <p>
+                        <p class="grey-writing fs-13">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe quam beatae at
                             mollitia modi animi similique numquam, itaque impedit, dolores laudantium facilis blanditiis
                             eos obcaecati architecto! Harum, sapiente dolorem?
                         </p>
-                        <button class="yellow">
+                        <button type="button" class="yellow px-4 py-2 fw-semibold">
                             BUY NOW
                         </button>
                     </div>
                 </div>
 
-                <div class="row text-center">
-                    <h6 class="yellow">
+                <div class="row text-center mt-5 mb-5">
+                    <h6 class="yellow fs-14 mt-5">
                         WHAT PEOPLE SAY
                     </h6>
-                    <h3 class="grey">
+                    <h3 class="grey abril fs-50 mb-5">
                         Reviews
                     </h3>
                     <div class="col-4">
-                        <p>
+                        <p class="grey-writing fs-13 mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempore molestias
                             dignissimos nesciunt saepe. Alias vero fugit non minus. Perferendis nemo similique officia
                             deleniti aliquid aperiam cum iste mollitia dolore.
                         </p>
-                        <img src="./img/avadabarbers-trimcut-gallery6-200x200.jpg" class="w-50 rounded-circle"
-                            alt="John Doe">
-                        <p class="yellow">
-                            John Doe
-                        </p>
+                        <a href="#">
+                            <img src="./img/avadabarbers-trimcut-gallery6-200x200.jpg" class="w-50 rounded-circle"
+                                alt="John Doe">
+                        </a>
+                        <a href="#">
+                            <p class="yellow fs-13 fst-italic fw-semibold mt-3">
+                                John Doe
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <p>
+                        <p class="grey-writing fs-13 mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempore molestias
                             dignissimos nesciunt saepe. Alias vero fugit non minus. Perferendis nemo similique officia
                             deleniti aliquid aperiam cum iste mollitia dolore.
                         </p>
-                        <img src="./img/avadabarbers-trimcut-gallery7-200x201.jpg" class="w-50 rounded-circle"
-                            alt="Pete Jones">
-                        <p class="yellow">
-                            Pete Jones
-                        </p>
+                        <a href="#">
+                            <img src="./img/avadabarbers-trimcut-gallery7-200x201.jpg" class="w-50 rounded-circle"
+                                alt="Pete Jones">
+                        </a>
+                        <a href="#">
+                            <p class="yellow fs-13 fst-italic fw-semibold mt-3">
+                                Pete Jones
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <p>
+                        <p class="grey-writing fs-13 mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tempore molestias
                             dignissimos nesciunt saepe. Alias vero fugit non minus. Perferendis nemo similique officia
                             deleniti aliquid aperiam cum iste mollitia dolore.
                         </p>
-                        <img src="./img/avadabarbers-trimcut-gallery3-200x201.jpg" class="w-50 rounded-circle"
-                            alt="Mark Wilson">
-                        <p class="yellow">
-                            Mark Wilson
-                        </p>
+                        <a href="#">
+                            <img src="./img/avadabarbers-trimcut-gallery3-200x201.jpg" class="w-50 rounded-circle"
+                                alt="Mark Wilson">
+                        </a>
+                        <a href="#">
+                            <p class="yellow fs-13 fst-italic fw-semibold mt-3">
+                                Mark Wilson
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -286,54 +347,78 @@
 
         <!-- RECENT BLOG POSTS SECTION -->
         <section class="recent-blog-posts kind-of-beige text-center">
-            <h6 class="yellow">
+            <svg class="fusion-big-triangle-candy mb-4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#fff;padding:0;">
+                <path d="M0 100 L50 2 L100 100 Z"></path>
+            </svg>
+            <h6 class="yellow fs-14 mt-5">
                 TALES FROM THE BARBER SHOP
             </h6>
-            <h3 class="grey">Recent Blog Posts</h3>
+            <h3 class="grey abril fs-50 mb-5">
+                Recent Blog Posts
+            </h3>
 
-            <div class="smaller-container">
-                <div class="row">
+            <div class="smaller-container m-auto">
+                <div class="row gy-4">
                     <div class="col-4">
-                        <img src="./img/avadabarbers-second-blog-320x202.jpg" class="w-100" alt="Post 1">
+                        <a href="#">
+                            <img src="./img/avadabarbers-second-blog-320x202.jpg" class="w-100" alt="Post 1">
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-choosing-blog-320x202.jpg" class="w-100" alt="Post 2">
+                        <a href="#">
+                            <img src="./img/avadabarbers-choosing-blog-320x202.jpg" class="w-100" alt="Post 2">
+                        </a>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-ourservice-blog-320x202.jpg" class="w-100" alt="Post 3">
+                        <a href="#">
+                            <img src="./img/avadabarbers-ourservice-blog-320x202.jpg" class="w-100" alt="Post 3">
+                        </a>
                     </div>
                     <div class="col-4">
-                        <h5 class="yellow">
-                            Avada Barbers now open
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsam excepturi, ipsa fuga
-                            obcaecati aperiam odio consequatur quaerat maxime pariatur nisi facere assumenda, doloribus
-                            impedit aspernatur. Expedita a necessitatibus ipsa?
-                        </p>
+                        <a href="#">
+                            <h5 class="yellow abril fs-4">
+                                Avada Barbers now open
+                            </h5>
+                            <p class="grey-writing fs-13">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsam excepturi, ipsa
+                                fuga
+                                obcaecati aperiam odio consequatur quaerat maxime pariatur nisi facere assumenda,
+                                doloribus
+                                impedit aspernatur. Expedita a necessitatibus ipsa?
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <h5 class="yellow">
-                            Choosing the right barber
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque ipsam labore nemo facere
-                            ducimus incidunt quis in veritatis praesentium minus reiciendis dignissimos velit rerum
-                            sequi odit, quibusdam, id reprehenderit. Ipsa!
-                        </p>
+                        <a href="#">
+                            <h5 class="yellow abril fs-4">
+                                Choosing the right barber
+                            </h5>
+                            <p class="grey-writing fs-13">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque ipsam labore nemo
+                                facere
+                                ducimus incidunt quis in veritatis praesentium minus reiciendis dignissimos velit rerum
+                                sequi odit, quibusdam, id reprehenderit. Ipsa!
+                            </p>
+                        </a>
                     </div>
                     <div class="col-4">
-                        <h5 class="yellow">
-                            Quick Service Guide
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos debitis sequi officia
-                            rem, quis possimus sint ducimus dolores totam ut tempore quidem enim expedita vitae
-                            excepturi quo perspiciatis similique sunt?
-                        </p>
+                        <a href="#">
+                            <h5 class="yellow abril fs-4">
+                                Quick Service Guide
+                            </h5>
+                            <p class="grey-writing fs-13">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos debitis sequi
+                                officia
+                                rem, quis possimus sint ducimus dolores totam ut tempore quidem enim expedita vitae
+                                excepturi quo perspiciatis similique sunt?
+                            </p>
+                        </a>
                     </div>
-                    <div class="col">
-                        <button class="yellow">READ MORE FROM OUR BLOG</button>
+                    <div class=" mb-5">
+                        <button type="button" class="yellow px-4 py-2 mt-4 mb-5 fw-semibold">
+                            READ MORE FROM OUR BLOG
+                        </button>
                     </div>
                 </div>
             </div>
@@ -342,39 +427,70 @@
 
     <footer>
         <!-- UPPER FOOTER -->
-        <section class="upper-footer text-center">
-            <div class="smaller-container">
+        <section class="upper-footer text-center py-4">
+            <div class="smaller-container m-auto">
                 <div class="row">
                     <div class="col-4">
-                        <img src="./img/avadabarbers_footer_shop_image-300x234.png" class="w-100" alt="shop image">
-                        <button class="yellow">
+                        <a href="#">
+                            <img src="./img/avadabarbers_footer_shop_image-300x234.png" class="w-100 mt-4 mb-4"
+                                alt="shop image">
+                        </a>
+                        <button type="button" class="yellow px-4 py-2 fw-semibold fs-12 mb-4">
                             SHOP OUR RANGE NOW
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-logo-x1.png" class="w-50" alt="logo footer">
-                        <p id="address">
-                            Avada Barbers 123 New York Street New York City info@yourwebsite.com
-                            +1 (555) 555-1212
+                        <img src="./img/avadabarbers-logo-x1.png" class="w-50 mt-4 mb-4" alt="logo footer">
+
+                        <p id="address" class="grey-writing fs-12">
+                            <a href="#">
+                                Avada Barbers
+                            </a>
+                            <br>
+                            <a href="#">
+                                123 New York Street
+                            </a>
+                            <br>
+                            <a href="#">
+                                New York City
+                            </a>
+                            <br>
+                            <a href="#">
+                                info@yourwebsite.com
+                            </a>
+                            <br>
+                            <a href="#">
+                                +1 (555) 555-1212
+                            </a>
                         </p>
-                        <p class="yellow">
+                        <p class="yellow fs-13 fw-semibold mt-4 mb-4">
                             FOLLOW US
                         </p>
-                        <p>
-                            <i class="fa-brands fa-facebook-f">
-                            </i>
-                            <i class="fa-brands fa-twitter">
-                            </i>
-                            <i class="fa-brands fa-youtube">
-                            </i>
-                            <i class="fa-brands fa-instagram">
-                            </i>
+                        <p class="fs-13">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f me-2">
+                                </i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter me-2">
+                                </i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube me-2">
+                                </i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram me-2">
+                                </i>
+                            </a>
                         </p>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers_footer_appointment_image-300x234.png" class="w-100"
-                            alt="shop image">
-                        <button class="yellow">
+                        <a href="#">
+                            <img src="./img/avadabarbers_footer_appointment_image-300x234.png" class="w-100 mt-4 mb-4"
+                                alt="shop image">
+                        </a>
+                        <button type="button" class="yellow px-4 py-2 fw-semibold fs-12 mb-4">
                             BOOK YOUR APPOINTMENT
                         </button>
                     </div>
@@ -383,12 +499,19 @@
         </section>
 
         <!-- BOTTOM FOOTER -->
-        <section class="bottom-footer text-center">
+        <section class="bottom-footer text-center position-relative">
             <span class="fs-11">
                 <i class="fa-regular fa-copyright">
                 </i>
-                Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress
+                Copyright 2012 - 2020 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved | Powered by <a
+                    href="#">WordPress</a>
             </span>
+            <div>
+                <a href=" #top" id="scroll-top">
+                    <i class="fa-solid fa-circle-chevron-up fs-1">
+                    </i>
+                </a>
+            </div>
         </section>
     </footer>
 
