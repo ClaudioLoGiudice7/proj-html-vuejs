@@ -52,8 +52,8 @@
                     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="overlay-content">
                         <ul>
-                            <li v-for="link in links">
-                                <a :href="link.href" :class="link.class">{{ link.text }}
+                            <li v-for="headerLink in headerLinks">
+                                <a :href="headerLink.href" :class="headerLink.class">{{ headerLink.text }}
                                 </a>
                             </li>
                         </ul>
@@ -440,7 +440,9 @@
                         </button>
                     </div>
                     <div class="col-4">
-                        <img src="./img/avadabarbers-logo-x1.png" class="w-50 mt-4 mb-4" alt="logo footer">
+                        <a href="#">
+                            <img src="./img/avadabarbers-logo-x1.png" class="w-50 mt-4 mb-4" alt="logo footer">
+                        </a>
 
                         <p id="address" class="grey-writing fs-12">
                             <a href="#">
@@ -514,6 +516,38 @@
             </div>
         </section>
     </footer>
+
+
+
+    <!-- PROVA FOOTER CON VUE NON RIUSCITA -->
+
+    <!-- <footer> -->
+    <!-- UPPER FOOTER -->
+    <!-- <section class="upper-footer text-center py-4">
+    			<div class="smaller-container m-auto">
+    				<div class="row">
+    					<div v-for="(link, index) in upperLinks" :key="index"
+    						:class="['col-4', { 'offset-2': index === 1 }]">
+    						<a :href="link.imageLink">
+    							<img :src="link.image" class="w-100 mt-4 mb-4" :alt="link.alt" />
+    						</a>
+    						<button type="button" class="yellow px-4 py-2 fw-semibold fs-12 mb-4"
+    							v-text="link.button"></button>
+    					</div>
+    				</div>
+    			</div>
+    		</section> -->
+
+    <!-- BOTTOM FOOTER -->
+    <!-- <section class="bottom-footer text-center position-relative">
+    			<span class="fs-11" v-text="bottomText"></span>
+    			<div>
+    				<a href="#top" id="scroll-top">
+    					<i class="fa-solid fa-circle-chevron-up fs-1"></i>
+    				</a>
+    			</div>
+    		</section>
+    	</footer> -->
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

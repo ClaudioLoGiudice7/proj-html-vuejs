@@ -23,7 +23,7 @@ function scrollFunction() {
 const app = Vue.createApp({
     data() {
         return {
-            links: [
+            headerLinks: [
                 {
                     text: "Home",
                     href: "#",
@@ -59,7 +59,37 @@ const app = Vue.createApp({
                     href: "#",
                     class: "fs-5 jump"
                 },
-            ]
+            ],
+
+            // PROVA FOOTER CON VUE NON RIUSCITA
+
+            // upperLinks: [
+            //     {
+            //         image: "./img/avadabarbers_footer_shop_image-300x234.png",
+            //         imageLink: "#",
+            //         alt: "shop image",
+            //         button: "SHOP OUR RANGE NOW",
+            //     },
+            //     {
+            //         image: "./img/avadabarbers-logo-x1.png",
+            //         imageLink: "#",
+            //         alt: "logo footer",
+            //         name: "Avada Barbers",
+            //         street: "123 New York Street",
+            //         city: "New York City",
+            //         email: "info@yourwebsite.com",
+            //         phone: "+1 (555) 555-1212",
+            //     },
+            //     {
+            //         image: "./img/avadabarbers_footer_appointment_image-300x234.png",
+            //         imageLink: "#",
+            //         alt: "appointment image",
+            //         button: "BOOK YOUR APPOINTMENT",
+            //     },
+            // ],
+
+            // bottomText:
+            //     "Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress",
         };
     },
 });
